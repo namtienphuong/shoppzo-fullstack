@@ -35,7 +35,7 @@ function Header() {
                             <input type="text" placeholder="Type here..." className="w-full text-sm outline-none pr-10 placeholder:text-gray-400" />
                             <DropdownMenu>
                                 <DropdownMenuTrigger className="flexCenter gap-1 px-2 border-x-2 border-slate-900/10 cursor-pointer font-semibold text-sm text-gray-500 outline-none">
-                                    {selectedCategory || ""}
+                                    {selectedCategory || "Categories"}
                                     <ChevronDownIcon strokeWidth={2.25} size={19} />
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
@@ -46,7 +46,6 @@ function Header() {
                                             <p>{cat.name}</p>
                                         </DropdownMenuItem>
                                     ))}
-                                    <DropdownMenuItem>Profile</DropdownMenuItem>
                                 </DropdownMenuContent>
                             </DropdownMenu>
                             <div className="p-3 cursor-pointer">
