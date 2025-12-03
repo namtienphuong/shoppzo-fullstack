@@ -8,16 +8,15 @@ const AppContextProvider = ({ children }) => {
     const currency = "$"
     const [products, setProducts] = useState([])
     const [subTotal, setSubTotal] = useState(0)
-    const [totalAmount, setTotalAmoun] = useState(0)
+    const [totalAmount, setTotalAmount] = useState(0)
     const router = useRouter()
 
     useEffect(() => {
         try {
-            setProducts(dummyProducts)
+            setProducts(products)
         } catch (error) {
             console.log(error)
         }
-
     }, [])
 
     const value = {
@@ -25,7 +24,7 @@ const AppContextProvider = ({ children }) => {
         subTotal,
         setSubTotal,
         totalAmount,
-        setTotalAmoun,
+        setTotalAmount,
         router
     }
     return (
@@ -34,4 +33,6 @@ const AppContextProvider = ({ children }) => {
 }
 
 export default AppContextProvider
+
 export const useAppContext = () => useContext(AppContext)
+

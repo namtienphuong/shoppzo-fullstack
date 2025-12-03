@@ -1,47 +1,41 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import Title from "./Title";
+"use client"
+import React, { useEffect, useState } from 'react'
+import Title from './Title'
 import {
     Carousel,
     CarouselContent,
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "@/components/ui/carousel";
-import { useAppContext } from "../(context)/AppContext";
-import Item from "./Item";
+} from "@/components/ui/carousel"
+import { useAppContext } from '../(context)/AppContext'
 
 function NewArrivals() {
     const { products } = useAppContext()
-    const [newArrivals, setNewArrivals] = useState([])
+    const [NewArrivals, setNewArrivals] = useState([])
 
     useEffect(() => {
-        const data = products.slice(0, 7)
-        setNewArrivals(data)
+        const data = products
     }, [products])
 
     return (
-        <section className="max-padd-container pt-16">
+        <section className='max-padd-container pt-16'>
             <Title
                 title1={"New"}
                 title2={"Arrivals"}
                 titleStyles={"pb-14"}
-                paraStyles={"!block"}
+                paraStyles={"!bl ock"}
             />
-            {/* Container */}
+            {/* CONTAINER */}
             <Carousel className={"w-full"}>
                 <CarouselContent className={""}>
-                    {newArrivals.map((product) => (
-                        <CarouselItem key={product.id}>
-                            <Item product={product} />
-                        </CarouselItem>
-                    ))}
+                    <CarouselItem>...</CarouselItem>
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />
             </Carousel>
         </section>
-    );
+    )
 }
 
-export default NewArrivals;
+export default NewArrivals
