@@ -9,13 +9,15 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel"
 import { useAppContext } from '../(context)/AppContext'
+import Item from './Item'
 
 function NewArrivals() {
     const { products } = useAppContext()
-    const [NewArrivals, setNewArrivals] = useState([])
+    const [newArrivals, setNewArrivals] = useState([])
 
     useEffect(() => {
-        const data = products
+        const data = products.slice(0, 7)
+        setNewArrivals(data)
     }, [products])
 
     return (
@@ -28,8 +30,12 @@ function NewArrivals() {
             />
             {/* CONTAINER */}
             <Carousel className={"w-full"}>
-                <CarouselContent className={""}>
-                    <CarouselItem>...</CarouselItem>
+                <CarouselContent className={"-ml-2.5"}>
+                    {newArrivals.map((product) => (
+                        <CarouselItem key={product.id} className={"pl-5 sm:basis-1/2 md:basis-1.3 lg:basis-1/4 xl:basis-1/5"}>
+                            <Item product={product} />
+                        </CarouselItem>
+                    ))}
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />

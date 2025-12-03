@@ -15,3 +15,8 @@ Tạo file (context)/AppContext.jsx
 Tạo file app/Provider.jsx
 Cập nhật file public/data.jsx
 Tạo file (component)/Item.jsx
+
+4.12.2025
+cập nhật Item.jsx
+Cập nhật NewArrivals.jsx
+Cập nhật AppContext.jsx

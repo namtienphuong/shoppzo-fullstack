@@ -13,13 +13,14 @@ const AppContextProvider = ({ children }) => {
 
     useEffect(() => {
         try {
-            setProducts(products)
+            setProducts(dummyProducts)
         } catch (error) {
             console.log(error)
         }
     }, [])
 
     const value = {
+        currency,
         products,
         subTotal,
         setSubTotal,
