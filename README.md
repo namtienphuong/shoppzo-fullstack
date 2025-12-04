@@ -20,3 +20,8 @@ Tạo file (component)/Item.jsx
 cập nhật Item.jsx
 Cập nhật NewArrivals.jsx
 Cập nhật AppContext.jsx
+
+5.12.2025
+cài đặt: "npx shadcn@latest add dialog"
+Cập nhật file Item.jsx
+Tạo file ProductDetails.jsx
